@@ -49,6 +49,10 @@
     "cities": {
       "collection": "city",
       "via": "contributors"
+    },
+    "items": {
+      "collection": "item",
+      "via": "contributors"
     }
   },
   "autoCreatedAt": true,
