@@ -1,0 +1,53 @@
+{
+  "identity": "item",
+  "connection": "",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+
+    "type": {
+      "type": "string",
+      "enum": [
+        "entreprise",
+        "touristic",
+        "institution"
+      ],
+      "required": true
+    },
+    "inseecommune": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "horaires": {
+      "type": "array"
+    },
+    "coordinates": {
+      "type": "array",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+
+
+    "createdBy": {
+      "model": "item"
+    },
+    "updatedBy": {
+      "model": "item"
+    },
+    "contributors": {
+      "collection": ["yuki"],
+      "via": "item"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}
