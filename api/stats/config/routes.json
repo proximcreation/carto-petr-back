@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /stats": {
+      "controller": "Stats",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /stats/:id": {
+      "controller": "Stats",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /stats": {
+      "controller": "Stats",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /stats/:id": {
+      "controller": "Stats",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /stats/:id": {
+      "controller": "Stats",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /stats/:parentId/:relation": {
+      "controller": "Stats",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /stats/:parentId/:relation/:id": {
+      "controller": "Stats",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

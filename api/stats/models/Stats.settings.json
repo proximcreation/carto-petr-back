@@ -1,0 +1,41 @@
+{
+  "identity": "stats",
+  "connection": "",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "insee": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+    },
+    "data": {
+      "type": "json",
+      "required": true,
+    },
+
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "stats"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}
