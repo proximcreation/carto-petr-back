@@ -18,11 +18,11 @@
       "type": "string"
     },
     "description": {
-      "type": "string",
+      "type": "string"
     },
     "data": {
-      "type": "json",
-      "required": true,
+      "type": "string",
+      "required": true
     },
 
     "createdBy": {
